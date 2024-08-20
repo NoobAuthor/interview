@@ -2,14 +2,16 @@ from typing import *
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        prevMap = {} # val: index
+        res = {}
 
         for i, n in enumerate(nums):
-            diff = target - n
-            if diff in prevMap:
-                return [prevMap[diff], i]
-            prevMap[n] = i
-        return [] 
+            value = target - n
+            if value in res:
+                return [res[value], i]
+            res[n] = i
+        
+        return []
+
 
 # Test the function
 solution = Solution()
