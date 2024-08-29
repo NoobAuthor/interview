@@ -15,7 +15,21 @@ class Solution:
         
         return memo[n]
 
+    def recursive_fibonacci(self, n: int) -> int:
+        memo = {}
+        def helper(n):
+            if n in memo:
+                return memo[n]
+            if n <= 2:
+                return 1
+            memo[n] = helper(n-1) + helper(n-2)
+            return memo[n]
+        return helper(n)
+
+
 # Test Cases
 sol = Solution()
 assert sol.fibonacci(50) == 12586269025
+print('All test cases pass')
+assert sol.recursive_fibonacci(50) == 12586269025
 print('All test cases pass')
