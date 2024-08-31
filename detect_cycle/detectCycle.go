@@ -20,7 +20,6 @@ func detectCycle(head *Node) bool {
 		head = head.next
 	}
 	return false
-
 }
 
 func main() {
