@@ -1,11 +1,9 @@
-from typing import *
-
 # Problem: Rotated Sorted Array  (LeetCode 33)
 
 # Given a rotated sorted array, find the index of a target element. If the target element is not found, return -1.
 
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
+    def search(self, nums: list[int], target: int) -> int:
         l, r = 0, len(nums)
 
         while l <= r:
