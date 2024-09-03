@@ -1,11 +1,11 @@
-from typing import *
-
 # Merge two sorted linked lists
 
+
 class Node:
-    def __init__(slef, new_data: int):
-        slef.data = new_data
-        slef.next = None
+    def __init__(self, new_data: int):
+        self.data = new_data
+        self.next = None
+
 
 class Solution:
     def merge_sort_list(self, a: Node, b: Node) -> Node:
@@ -20,9 +20,10 @@ class Solution:
         else:
             result = b
             result.next = self.merge_sort_list(a, b.next)
-        
+
         return result
-    
+
+
 # Test the function
 solution = Solution()
 a = Node(1)
@@ -39,7 +40,6 @@ b.next.next.next.next = Node(10)
 
 result = solution.merge_sort_list(a, b)
 while result is not None:
-    print(result.data, end = " ")
+    print(result.data, end=" ")
     result = result.next
 print()
-
