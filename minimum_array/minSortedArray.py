@@ -1,5 +1,3 @@
-from typing import *   
-
 # Suppose an array of length n sorted in ascending order is rotated between 1 and n times.
 # For example, the array nums = [0,1,2,4,5,6,7] might become:
 # - [4,5,6,7,0,1,2] if it was rotated 4 times.
@@ -10,8 +8,9 @@ from typing import *
 
 # Given the sorted rotated array nums of unique elements, return the minimum element of this array.
 
+
 class Solution:
-    def findMin(self, nums: List[int]) -> int:
+    def findMin(self, nums: list[int]) -> int:
         res = nums[0]
         l, r = 0, len(nums) - 1
 
@@ -26,10 +25,12 @@ class Solution:
                 l = m + 1
             else:
                 r = m - 1
-        
+
         return res
+
 
 # Test Cases
 sol = Solution()
-assert sol.findMin([3,4,5,1,2]) == 1
-print('All test cases pass')
+assert sol.findMin([3, 4, 5, 1, 2]) == 1
+print("All test cases pass")
+
